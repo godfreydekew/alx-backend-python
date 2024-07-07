@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 '''A function to showcase iteratables '''
+import typing
 
 
 def element_length(lst: typing.Iterable[typing.Sequence]
