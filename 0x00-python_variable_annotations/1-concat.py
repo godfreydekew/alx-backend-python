@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+'''A fucntion to concacatenate'''
 
 def concat(str1: str, str: str) -> str:
     """
