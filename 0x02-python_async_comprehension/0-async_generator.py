@@ -7,7 +7,7 @@ import random
 from typing import AsyncGenerator
 
 
-async def async_generator() -> AsyncGenerator[float, None]:
+async def async_generator() -> AsyncGenerator[float, int]:
     '''
     Yields numbers from 0 to 10.
     '''
