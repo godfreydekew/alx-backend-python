@@ -8,16 +8,17 @@ import unittest
 
 
 class TestAccessNestedMap(unittest.TestCase):
-    """Parameterize a unit test Class
-    """
+    """Tests the `access_nested_map` function."""
     @parameterized.expand([
-        ("test1", {"a": 1}, ("a",), 1),
-        ("test2", {"a": {"b": 2}}, ("a",), {"b": 2}),
-        ("test3", {"a": {"b": 2}}, ("a", "b"), 2)
+        ({"a": 1}, ("a",), 1),
+        ({"a": {"b": 2}}, ("a",), {"b": 2}),
+        ({"a": {"b": 2}}, ("a", "b"), 2),
     ])
     def test_access_nested_map(
-            self, n: str,
-            np: Dict, p: Tuple[str], e: Union[Dict, int]) -> None:
-        """est that the method returns what it is supposed to.
-        """
-        self.assertEqual(access_nested_map(np, p), e)
+            self,
+            nested_map: Dict,
+            path: Tuple[str],
+            expected: Union[Dict, int],
+            ) -> None:
+        """Tests `access_nested_map`'s output."""
+        self.assertEqual(access_nested_map(nested_map, path), expected)
